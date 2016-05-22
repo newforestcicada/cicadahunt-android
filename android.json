@@ -1,0 +1,74 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {
+            "res/xml/config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"CicadaDetector\"><param name=\"android-package\" value=\"info.newforestcicada.cicadahunt.plugin.CicadaDetectorPlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "AndroidManifest.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.RECORD_AUDIO\" />",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "res/values/strings.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<string name=\"MEANS\">distribution_means</string>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<string name=\"VARS\">distribution_variances</string>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "installed_plugins": {
+        "cordova-cicada-detector-plugin": {
+            "PACKAGE_NAME": "info.newforestcicada.hunt"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "info.newforestcicada.hunt"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-cicada-detector-plugin/www/cicada-detector-plugin.js",
+            "id": "cordova-cicada-detector-plugin.CicadaDetector",
+            "clobbers": [
+                "CicadaDetector"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-cicada-detector-plugin": "0.2.3",
+        "cordova-plugin-whitelist": "1.2.2"
+    }
+}
